@@ -3,10 +3,18 @@ import { Plus, Minus } from 'lucide-react';
 import { FaqItem } from '../types';
 
 const faqs: FaqItem[] = [
-  { question: "¿Cuánto cuesta una página web profesional?", answer: "No hay un precio único, pero la calidad tiene un coste. Webs corporativas parten de rangos profesionales, y tiendas online requieren mayor inversión. Lo importante: diseñamos para que recuperes la inversión." },
-  { question: "¿Cuánto tiempo tardáis en entregarla?", answer: "Somos ágiles. Una landing page puede estar en 10 días. Una web corporativa completa suele tomar 3-4 semanas, siempre que tengamos los contenidos a tiempo." },
-  { question: "¿Incluye mantenimiento y hosting?", answer: "Ofrecemos planes de mantenimiento opcionales para que duermas tranquilo: copias de seguridad, actualizaciones de seguridad y servidor de alta velocidad." },
-  { question: "¿Es compatible con el Kit Digital?", answer: "Sí. Somos Agentes Digitalizadores. Si cumples los requisitos, podemos gestionar tu bono de hasta 2.000€ para cubrir el coste del proyecto." },
+  { 
+    question: "¿Cuánto cuesta una página web profesional?", 
+    answer: "No hay un precio único, pero la calidad tiene un coste. Webs corporativas parten de rangos profesionales, y tiendas online requieren mayor inversión. Lo importante: diseñamos para que recuperes la inversión." 
+  },
+  { 
+    question: "¿Cuánto tiempo tardáis en entregarla?", 
+    answer: "En 2 días. Somos ágiles. Tu landing page puede estar lista y publicada en 48 horas una vez tengamos el contenido." 
+  },
+  { 
+    question: "¿Incluye dominio y hosting?", 
+    answer: "Podemos gestionarlo o trabajar con tu proveedor. Se cotiza aparte según necesidades." 
+  },
 ];
 
 const FAQ: React.FC = () => {

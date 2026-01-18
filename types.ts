@@ -21,6 +21,7 @@ export interface PortfolioItem {
   category: 'Corporativa' | 'Ecommerce' | 'Landing';
   image: string;
   description: string;
+  link?: string;
 }
 
 export interface Service {

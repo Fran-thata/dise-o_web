@@ -35,6 +35,9 @@ const Hero: React.FC = () => {
              </Reveal>
 
             <Reveal delay={100}>
+              <span className="text-secondary-400 font-bold tracking-widest uppercase text-xs md:text-sm mb-4 block font-display">
+                Thiara Diseño Web
+              </span>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold font-display leading-[1.1] mb-6 text-white tracking-tight">
                 Diseño Web <br/>
                 Profesional que <br/>

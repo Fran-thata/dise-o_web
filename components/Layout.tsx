@@ -21,17 +21,17 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="flex flex-col min-h-screen bg-bg-900 text-white font-sans overflow-x-hidden">
       
-      {/* Main Header */}
-      <header className="fixed top-0 w-full z-50 transition-all duration-300 bg-bg-900/80 backdrop-blur-md border-b border-white/5">
+      {/* Main Header - Changed to absolute (scrolls away), transparent background */}
+      <header className="absolute top-0 w-full z-50 transition-all duration-300 bg-transparent border-b border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
-            {/* Logo [MARCA] */}
+            {/* Logo [MARCA] - Updated to Thiara */}
             <div className="flex-shrink-0 flex items-center group cursor-pointer">
               <a href="#" className="flex items-center gap-2">
-                {/* Placeholder logo icon similar to reference */}
-                <div className="w-8 h-8 rounded-full bg-white text-bg-900 flex items-center justify-center font-bold font-display text-lg">W</div>
+                {/* Logo icon T */}
+                <div className="w-8 h-8 rounded-full bg-white text-bg-900 flex items-center justify-center font-bold font-display text-lg">T</div>
                 <span className="text-xl font-bold tracking-tight text-white font-display">
-                  WEB<span className="text-primary-500">PRO</span>
+                  Thiara<span className="text-primary-500">.</span>
                 </span>
               </a>
             </div>
@@ -82,7 +82,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden bg-bg-900 border-t border-white/10 animate-fade-in absolute w-full h-screen overflow-y-auto">
+          <div className="lg:hidden bg-bg-900 border-t border-white/10 animate-fade-in absolute w-full h-screen overflow-y-auto z-50">
             <div className="px-4 pt-4 pb-20 space-y-2">
               {navItems.map((item) => (
                 <a
@@ -115,14 +115,15 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         )}
       </header>
 
-      <main className="flex-grow pt-20">{children}</main>
+      {/* Removed pt-20 from main so hero background starts at very top under transparent header */}
+      <main className="flex-grow">{children}</main>
 
       {/* Footer */}
       <footer className="bg-black py-12 border-t border-white/10 text-slate-400 mb-20 md:mb-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
           <div className="space-y-4">
              <a href="#" className="text-2xl font-bold tracking-tighter text-white font-display block">
-                WEB<span className="text-primary-500">PRO</span>
+                Thiara
               </a>
             <p className="leading-relaxed opacity-70">
               Transformamos negocios con diseño web estratégico y tecnología moderna.
@@ -153,7 +154,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           </div>
         </div>
         <div className="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-white/5 text-center text-xs opacity-50">
-          © {new Date().getFullYear()} WebPro. Todos los derechos reservados.
+          © {new Date().getFullYear()} Thiara Diseño Web. Todos los derechos reservados.
         </div>
       </footer>
 

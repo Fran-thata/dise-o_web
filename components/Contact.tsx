@@ -66,30 +66,36 @@ const Contact: React.FC = () => {
           <Reveal delay={200}>
             <div className="glass-card rounded-3xl p-8 md:p-10 shadow-2xl relative">
               <h3 className="text-2xl font-bold text-white mb-6 font-display">Tu proyecto empieza aquí</h3>
-              <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+              
+              {/* Form updated for Formspree */}
+              <form 
+                className="space-y-5" 
+                action="https://formspree.io/f/xlggjvvv" 
+                method="POST"
+              >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <div>
                     <label className="block text-xs font-bold text-slate-400 mb-2 uppercase tracking-wide">Nombre</label>
-                    <input type="text" className="w-full px-4 py-3 rounded-lg bg-bg-800 border border-white/10 text-white focus:border-primary-500 focus:ring-1 focus:ring-primary-500 outline-none transition-all placeholder-slate-600" placeholder="Tu nombre" required />
+                    <input type="text" name="name" className="w-full px-4 py-3 rounded-lg bg-bg-800 border border-white/10 text-white focus:border-primary-500 focus:ring-1 focus:ring-primary-500 outline-none transition-all placeholder-slate-600" placeholder="Tu nombre" required />
                   </div>
                   <div>
                     <label className="block text-xs font-bold text-slate-400 mb-2 uppercase tracking-wide">Teléfono</label>
-                    <input type="tel" className="w-full px-4 py-3 rounded-lg bg-bg-800 border border-white/10 text-white focus:border-primary-500 focus:ring-1 focus:ring-primary-500 outline-none transition-all placeholder-slate-600" placeholder="+34..." required />
+                    <input type="tel" name="phone" className="w-full px-4 py-3 rounded-lg bg-bg-800 border border-white/10 text-white focus:border-primary-500 focus:ring-1 focus:ring-primary-500 outline-none transition-all placeholder-slate-600" placeholder="+34..." required />
                   </div>
                 </div>
 
                 <div>
                   <label className="block text-xs font-bold text-slate-400 mb-2 uppercase tracking-wide">Email</label>
-                  <input type="email" className="w-full px-4 py-3 rounded-lg bg-bg-800 border border-white/10 text-white focus:border-primary-500 focus:ring-1 focus:ring-primary-500 outline-none transition-all placeholder-slate-600" placeholder="tu@email.com" required />
+                  <input type="email" name="email" className="w-full px-4 py-3 rounded-lg bg-bg-800 border border-white/10 text-white focus:border-primary-500 focus:ring-1 focus:ring-primary-500 outline-none transition-all placeholder-slate-600" placeholder="tu@email.com" required />
                 </div>
 
                 <div>
                   <label className="block text-xs font-bold text-slate-400 mb-2 uppercase tracking-wide">Cuéntanos sobre el proyecto</label>
-                  <textarea rows={4} className="w-full px-4 py-3 rounded-lg bg-bg-800 border border-white/10 text-white focus:border-primary-500 focus:ring-1 focus:ring-primary-500 outline-none transition-all placeholder-slate-600" placeholder="Tipo de web, objetivos, referencias..."></textarea>
+                  <textarea name="message" rows={4} className="w-full px-4 py-3 rounded-lg bg-bg-800 border border-white/10 text-white focus:border-primary-500 focus:ring-1 focus:ring-primary-500 outline-none transition-all placeholder-slate-600" placeholder="Tipo de web, objetivos, referencias..."></textarea>
                 </div>
 
                 <div className="flex items-start">
-                  <input id="privacy" type="checkbox" className="h-4 w-4 bg-bg-800 border-white/20 rounded text-primary-600 focus:ring-primary-500 mt-1" required />
+                  <input id="privacy" type="checkbox" name="_optin" className="h-4 w-4 bg-bg-800 border-white/20 rounded text-primary-600 focus:ring-primary-500 mt-1" required />
                   <label htmlFor="privacy" className="ml-2 block text-xs text-slate-400">
                     Acepto la política de privacidad.
                   </label>
