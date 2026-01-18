@@ -1,55 +1,134 @@
 import React from 'react';
-import { ArrowRight, ChevronRight, Zap } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
+import { Reveal } from './Reveal';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-bg-900">
+    <section id="hero" className="relative pt-20 pb-12 lg:pt-32 lg:pb-24 overflow-hidden bg-bg-900">
       
-      {/* Grid Background */}
-      <div className="absolute inset-0 bg-[size:40px_40px] bg-grid-pattern opacity-20 pointer-events-none"></div>
+      {/* --- Visual Background "All in One" --- */}
       
-      {/* Glow Effects */}
-      <div className="absolute top-0 right-0 -mr-20 -mt-20 w-[500px] h-[500px] bg-primary-500/20 rounded-full blur-[100px] opacity-40 animate-pulse"></div>
-      <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-[400px] h-[400px] bg-secondary-400/10 rounded-full blur-[100px] opacity-30"></div>
+      {/* 1. Base Gradient */}
+      <div className="absolute inset-0 bg-hero-gradient pointer-events-none"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-10">
-        <div className="text-center max-w-4xl mx-auto">
-          
-          <div className="inline-flex items-center px-4 py-1.5 rounded-full border border-primary-500/30 bg-primary-500/10 text-primary-300 text-xs font-bold uppercase tracking-widest mb-8 backdrop-blur-md">
-            <span className="w-2 h-2 rounded-full bg-primary-500 mr-2 animate-pulse shadow-[0_0_10px_#7C3AED]"></span>
-            Diseño Web Premium
-          </div>
-          
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-display leading-tight mb-8">
-            Diseño Web Profesional <br/>
-            que convierte <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-secondary-300 to-primary-400 bg-300% animate-gradient">visitas en clientes</span>
-          </h1>
-          
-          <p className="text-lg md:text-xl text-slate-300 mb-10 leading-relaxed max-w-2xl mx-auto font-light">
-            Webs rápidas, limpias y SEO friendly: pensadas para generar contactos, llamadas y ventas.
-          </p>
+      {/* 2. Dots Pattern */}
+      <div className="absolute inset-0 bg-dots opacity-[0.2] pointer-events-none mask-gradient"></div>
 
-          <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
-            <a href="#contacto" className="group relative px-8 py-4 bg-white text-bg-900 font-bold rounded-full transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)]">
-              <span className="relative z-10 flex items-center">
-                Solicitar auditoría gratuita
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </span>
-            </a>
+      {/* 3. "Technologo" Curves/Waves (SVG Overlay) */}
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden z-0">
+        {/* Pink Glow Line Left */}
+        <div className="absolute top-[20%] -left-[10%] w-[50%] h-[2px] bg-gradient-to-r from-transparent via-primary-500 to-transparent blur-[2px] opacity-70 rotate-12"></div>
+        <div className="absolute top-[20%] left-[5%] w-4 h-4 rounded-full border border-primary-500 shadow-[0_0_10px_#d946ef]"></div>
+
+        {/* Blue Glow Line Right/Bottom */}
+        <div className="absolute bottom-[20%] right-[10%] w-[40%] h-[400px] border-[1px] border-white/5 rounded-full blur-[1px]"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          
+          {/* --- LEFT COLUMN: CONTENT --- */}
+          <div className="text-left relative">
+             {/* Small accent floating element */}
+             <Reveal delay={0}>
+                <div className="absolute -top-10 left-10 w-3 h-3 rounded-full bg-bg-900 border border-primary-500"></div>
+             </Reveal>
+
+            <Reveal delay={100}>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold font-display leading-[1.1] mb-6 text-white tracking-tight">
+                Diseño Web <br/>
+                Profesional que <br/>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-300">convierte visitas</span> <br/>
+                en clientes
+              </h1>
+            </Reveal>
             
-            <a href="#portfolio" className="group px-8 py-4 text-white border border-white/20 rounded-full font-semibold hover:bg-white/5 hover:border-white/40 transition-all flex items-center backdrop-blur-sm">
-              Ver portfolio
-              <ChevronRight className="ml-2 w-4 h-4 opacity-50 group-hover:opacity-100 transition-opacity" />
-            </a>
+            <Reveal delay={150}>
+              <p className="text-lg text-slate-400 mb-8 leading-relaxed max-w-xl font-light">
+                Webs rápidas, limpias y SEO. Claridad + confianza + acción: más formularios, más llamadas y más ventas.
+              </p>
+            </Reveal>
+
+            {/* Badges Row (No H tags) */}
+            <Reveal delay={200}>
+              <div className="flex flex-wrap items-center gap-3 mb-10">
+                {[
+                  "100% Adaptable", 
+                  "Optimizada para velocidad", 
+                  "Diseño a medida", 
+                  "React & Next.js"
+                ].map((text, idx) => (
+                  <span 
+                    key={idx} 
+                    className="inline-block px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm font-medium text-secondary-400 backdrop-blur-md hover:border-secondary-400/30 transition-colors"
+                  >
+                    {text}
+                  </span>
+                ))}
+              </div>
+            </Reveal>
+
+            {/* CTAs */}
+            <Reveal delay={250}>
+              <div className="flex flex-col sm:flex-row gap-4 mb-6">
+                {/* Primary: Gradient Button */}
+                <a 
+                  href="#contacto" 
+                  className="inline-flex justify-center items-center px-8 py-4 text-base font-bold rounded-full text-white bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-400 shadow-[0_0_25px_rgba(217,70,239,0.4)] transition-all hover:scale-105"
+                >
+                  Solicitar auditoría gratuita
+                </a>
+                {/* Secondary: Outline Button */}
+                <a 
+                  href="#portfolio" 
+                  className="inline-flex justify-center items-center px-8 py-4 text-base font-bold rounded-full text-white border border-white/30 hover:bg-white/5 hover:border-white/50 transition-all"
+                >
+                  Ver portfolio
+                </a>
+              </div>
+            </Reveal>
+
+            {/* Microcopy */}
+            <Reveal delay={300}>
+              <p className="text-xs text-slate-500 font-medium pl-2 border-l-2 border-primary-500/30">
+                Trabajamos online en toda España. Reunión por videollamada en 24–48h.
+              </p>
+            </Reveal>
           </div>
 
-          {/* Trust badges */}
-          <div className="mt-16 pt-8 border-t border-white/5 flex flex-wrap justify-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-             {/* Simple text or abstract logo placeholders for "Trust" */}
-             <span className="font-display font-bold text-xl tracking-wider">WORDPRESS</span>
-             <span className="font-display font-bold text-xl tracking-wider">WOOCOMMERCE</span>
-             <span className="font-display font-bold text-xl tracking-wider">GOOGLE ADS</span>
-             <span className="font-display font-bold text-xl tracking-wider">STRIPE</span>
+          {/* --- RIGHT COLUMN: VISUAL (CIRCLE IMAGE) --- */}
+          <div className="relative flex justify-center lg:justify-end">
+            <Reveal delay={200} width="100%">
+              {/* The "Circle" Container - Technologo Style */}
+              <div className="relative w-[340px] h-[340px] md:w-[500px] md:h-[500px] mx-auto lg:mx-0">
+                
+                {/* The Cyan Ring Border */}
+                <div className="absolute inset-0 rounded-full border-[6px] border-secondary-400 z-20"></div>
+                
+                {/* Image Mask */}
+                <div className="absolute inset-[6px] rounded-full overflow-hidden z-10 bg-bg-800">
+                   {/* New User Image */}
+                  <img 
+                    src="https://res.cloudinary.com/ddpujsrsg/image/upload/v1768753465/Captura_de_pantalla_2026-01-18_172329_u3nstx.png" 
+                    alt="Experiencia Digital" 
+                    className="w-full h-full object-cover"
+                  />
+                  {/* Purple overlay to blend slightly */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-bg-900/50 via-transparent to-transparent mix-blend-overlay"></div>
+                </div>
+
+                {/* Floating Orbs / Decor */}
+                {/* Pink Orb Left */}
+                <div className="absolute top-[20%] -left-8 w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full blur-md opacity-80 z-30 shadow-[0_0_20px_#d946ef]"></div>
+                
+                {/* Cyan Orb Bottom Right */}
+                <div className="absolute bottom-[10%] -right-4 w-10 h-10 bg-secondary-400 rounded-full blur-sm z-30 opacity-90 shadow-[0_0_15px_#22d3ee]"></div>
+
+                {/* Dotted half-circle decor (Simulated with border dashed) */}
+                <div className="absolute -inset-10 border-2 border-dashed border-white/10 rounded-full z-0 animate-spin-slow" style={{animationDuration: '20s'}}></div>
+
+              </div>
+            </Reveal>
           </div>
 
         </div>

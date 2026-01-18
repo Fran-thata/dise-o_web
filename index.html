@@ -5,42 +5,44 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Diseño Web Profesional | Webs que Venden</title>
-    <!-- Fonts: Space Grotesk & Inter -->
+    <!-- Fonts: Outfit (Geometric/Tech) & Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
-        darkMode: 'class', // We will force dark mode mostly
+        darkMode: 'class',
         theme: {
           extend: {
             fontFamily: {
               sans: ['Inter', 'sans-serif'],
-              display: ['Space Grotesk', 'sans-serif'],
+              display: ['Outfit', 'sans-serif'],
             },
             colors: {
               bg: {
-                DEFAULT: '#070A12',
-                900: '#070A12',
-                800: '#0F131F',
+                DEFAULT: '#0F041C', // Deep dark purple background base
+                900: '#0F041C',
+                800: '#1A0B2E',
+                700: '#2D1B4E',
               },
               primary: {
-                500: '#7C3AED', // Purple
-                600: '#6D28D9',
+                500: '#D946EF', // Neon Pink/Fuchsia
+                600: '#C026D3',
+                400: '#F0ABFC',
               },
               secondary: {
-                400: '#22D3EE', // Cyan
+                400: '#22D3EE', // Neon Cyan
                 500: '#06B6D4',
               },
-              gold: {
-                400: '#FBBF24',
-                500: '#F59E0B',
-              }
             },
             backgroundImage: {
-              'grid-pattern': "linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px)",
+              'hero-gradient': "radial-gradient(circle at 15% 50%, rgba(217, 70, 239, 0.15), transparent 25%), radial-gradient(circle at 85% 30%, rgba(34, 211, 238, 0.15), transparent 25%)",
+              'dots': "radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px)",
+            },
+            backgroundSize: {
+              'dots': '24px 24px',
             }
           }
         }
@@ -49,17 +51,20 @@
     <style>
       body {
         font-family: 'Inter', sans-serif;
-        background-color: #070A12;
+        background-color: #0F041C;
         color: white;
       }
       h1, h2, h3, h4, h5, h6 {
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: 'Outfit', sans-serif;
       }
       .glass-card {
         background: rgba(255, 255, 255, 0.03);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .text-glow {
+        text-shadow: 0 0 20px rgba(255,255,255,0.3);
       }
     </style>
 <script type="importmap">
@@ -75,7 +80,7 @@
 }
 </script>
 </head>
-  <body class="bg-[#070A12] text-slate-200 antialiased selection:bg-primary-500 selection:text-white">
+  <body class="bg-[#0F041C] text-slate-200 antialiased selection:bg-primary-500 selection:text-white">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
   </body>

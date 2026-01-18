@@ -17,7 +17,7 @@ const testimonials: Testimonial[] = [
     name: "David M.",
     role: "Fundador",
     company: "E-Shop Future",
-    content: "Velocidad brutal. Pasamos de perder ventas por carga lenta a duplicar la conversión. WooCommerce experto.",
+    content: "Velocidad brutal. Pasamos de perder ventas por carga lenta a duplicar la conversión. Expertos en venta online.",
     rating: 5,
     image: "https://picsum.photos/seed/u2/100/100"
   },

@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import { Menu, X, Globe, MessageCircle, FileText } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { NavItem } from '../types';
 
 const navItems: NavItem[] = [
+  { label: 'Inicio', href: '#hero' },
   { label: 'Servicios', href: '#servicios' },
-  { label: 'Proceso', href: '#proceso' },
   { label: 'Portfolio', href: '#portfolio' },
   { label: 'Kit Digital', href: '#kit-digital' },
-  { label: 'FAQ', href: '#faq' },
+  { label: 'FAQs', href: '#faq' },
+  { label: 'Contacto', href: '#contacto' },
 ];
 
 interface LayoutProps {
@@ -18,54 +19,57 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className="flex flex-col min-h-screen bg-bg-900 text-white font-sans">
+    <div className="flex flex-col min-h-screen bg-bg-900 text-white font-sans overflow-x-hidden">
       
       {/* Main Header */}
-      <header className="fixed top-0 w-full z-50 glass-card border-b-0 border-b-white/5 transition-all duration-300">
+      <header className="fixed top-0 w-full z-50 transition-all duration-300 bg-bg-900/80 backdrop-blur-md border-b border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
-            {/* Logo */}
+            {/* Logo [MARCA] */}
             <div className="flex-shrink-0 flex items-center group cursor-pointer">
-              <a href="#" className="text-2xl font-bold tracking-tighter text-white font-display">
-                WEB<span className="text-primary-500">PRO</span>
-                <span className="text-secondary-400 text-3xl leading-none">.</span>
+              <a href="#" className="flex items-center gap-2">
+                {/* Placeholder logo icon similar to reference */}
+                <div className="w-8 h-8 rounded-full bg-white text-bg-900 flex items-center justify-center font-bold font-display text-lg">W</div>
+                <span className="text-xl font-bold tracking-tight text-white font-display">
+                  WEB<span className="text-primary-500">PRO</span>
+                </span>
               </a>
             </div>
 
             {/* Desktop Nav */}
-            <nav className="hidden md:flex space-x-8 items-center">
+            <nav className="hidden lg:flex space-x-8 items-center">
               {navItems.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-sm font-medium text-slate-300 hover:text-white hover:scale-105 transition-all duration-200"
+                  className="relative text-sm font-medium text-slate-300 hover:text-white transition-colors py-2 group"
                 >
                   {item.label}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300 group-hover:w-full"></span>
                 </a>
               ))}
             </nav>
 
             {/* Actions */}
-            <div className="hidden md:flex items-center space-x-4">
-              <button className="text-slate-400 hover:text-white transition-colors">
-                <Globe size={20} />
-              </button>
+            <div className="hidden lg:flex items-center space-x-6">
+              {/* Link secundario */}
               <a
-                href="#contacto"
-                className="bg-white/10 hover:bg-white/20 border border-white/10 text-white px-6 py-2.5 rounded-full text-sm font-bold backdrop-blur-md transition-all hover:scale-105"
+                href="#portfolio"
+                className="text-sm font-medium text-slate-300 hover:text-white transition-colors"
               >
-                Auditoría Gratis
+                Ver portfolio
               </a>
+              {/* Botón CTA (pill) */}
               <a
                 href="#contacto"
-                className="bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-400 text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-[0_0_20px_rgba(124,58,237,0.3)] transition-all hover:scale-105"
+                className="bg-white text-bg-900 hover:bg-slate-200 px-6 py-2.5 rounded-full text-sm font-bold transition-all hover:scale-105 shadow-[0_0_15px_rgba(255,255,255,0.2)]"
               >
-                Empezar
+                Pedir presupuesto
               </a>
             </div>
 
             {/* Mobile Menu Button */}
-            <div className="flex md:hidden items-center space-x-4">
+            <div className="flex lg:hidden items-center">
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className="text-white p-2"
@@ -78,25 +82,32 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden glass-card border-t border-white/10 animate-fade-in absolute w-full">
-            <div className="px-4 pt-2 pb-6 space-y-1">
+          <div className="lg:hidden bg-bg-900 border-t border-white/10 animate-fade-in absolute w-full h-screen overflow-y-auto">
+            <div className="px-4 pt-4 pb-20 space-y-2">
               {navItems.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block px-3 py-4 text-base font-medium text-slate-200 hover:bg-white/5 rounded-md"
+                  className="block px-4 py-4 text-lg font-medium text-slate-200 hover:bg-white/5 rounded-xl border border-transparent hover:border-white/5"
                 >
                   {item.label}
                 </a>
               ))}
-              <div className="pt-4 flex flex-col gap-3">
+              <div className="pt-6 flex flex-col gap-4 px-4">
+                 <a
+                  href="#portfolio"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block w-full text-center text-slate-300 font-medium py-2"
+                >
+                  Ver portfolio
+                </a>
                  <a
                   href="#contacto"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block w-full text-center bg-white/10 text-white px-5 py-3 rounded-lg font-bold"
+                  className="block w-full text-center bg-white text-bg-900 px-5 py-4 rounded-xl font-bold text-lg"
                 >
-                  Auditoría Gratis
+                  Pedir presupuesto
                 </a>
               </div>
             </div>
@@ -133,26 +144,26 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             </ul>
           </div>
           <div>
-             <h4 className="text-white font-bold mb-4 font-display">Social</h4>
+             <h4 className="text-white font-bold mb-4 font-display">Redes</h4>
              <div className="flex gap-4">
                {/* Socials placeholder */}
-               <div className="w-8 h-8 rounded-full bg-white/5 hover:bg-primary-500 transition-colors"></div>
-               <div className="w-8 h-8 rounded-full bg-white/5 hover:bg-primary-500 transition-colors"></div>
+               <div className="w-8 h-8 rounded-full bg-white/5 hover:bg-primary-500 transition-colors cursor-pointer"></div>
+               <div className="w-8 h-8 rounded-full bg-white/5 hover:bg-primary-500 transition-colors cursor-pointer"></div>
              </div>
           </div>
         </div>
         <div className="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-white/5 text-center text-xs opacity-50">
-          © {new Date().getFullYear()} WebPro. All rights reserved.
+          © {new Date().getFullYear()} WebPro. Todos los derechos reservados.
         </div>
       </footer>
 
       {/* Sticky Mobile CTA */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-bg-900/90 backdrop-blur-lg border-t border-white/10 z-50 flex gap-3">
-        <a href="#contacto" className="flex-1 bg-white/10 border border-white/10 text-white font-bold py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-white/20 transition-all">
-          <FileText size={18} /> Auditoría Gratis
+      <div className="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-bg-900/95 backdrop-blur-xl border-t border-white/10 z-50 flex gap-3">
+        <a href="#contacto" className="flex-1 bg-white/10 border border-white/10 text-white font-bold py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-white/20 transition-all text-sm">
+          Auditoría Gratis
         </a>
-        <a href="https://wa.me/" className="flex-1 bg-primary-600 text-white font-bold py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-primary-500 transition-all shadow-lg shadow-primary-500/20">
-          <MessageCircle size={18} /> WhatsApp
+        <a href="https://wa.me/" className="flex-1 bg-primary-600 text-white font-bold py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-primary-500 transition-all shadow-lg shadow-primary-500/20 text-sm">
+          WhatsApp
         </a>
       </div>
     </div>
