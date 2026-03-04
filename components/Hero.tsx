@@ -1,5 +1,4 @@
 import React from 'react';
-import { ChevronRight } from 'lucide-react';
 import { Reveal } from './Reveal';
 
 const Hero: React.FC = () => {
@@ -39,16 +38,13 @@ const Hero: React.FC = () => {
                 Thiara Diseño Web
               </span>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold font-display leading-[1.1] mb-6 text-white tracking-tight">
-                Diseño Web <br/>
-                Profesional que <br/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-300">convierte visitas</span> <br/>
-                en clientes
+                Diseño web a medida
               </h1>
             </Reveal>
             
             <Reveal delay={150}>
               <p className="text-lg text-slate-400 mb-8 leading-relaxed max-w-xl font-light">
-                Webs rápidas, limpias y SEO. Claridad + confianza + acción: más formularios, más llamadas y más ventas.
+                Desarrollo de páginas web corporativas, landing pages y proyectos de diseño web a medida optimizados para captar clientes y mejorar la presencia online de tu negocio.
               </p>
             </Reveal>
 
@@ -58,8 +54,7 @@ const Hero: React.FC = () => {
                 {[
                   "100% Adaptable", 
                   "Optimizada para velocidad", 
-                  "Diseño a medida", 
-                  "React & Next.js"
+                  "Diseño a medida"
                 ].map((text, idx) => (
                   <span 
                     key={idx} 
@@ -79,14 +74,14 @@ const Hero: React.FC = () => {
                   href="#contacto" 
                   className="inline-flex justify-center items-center px-8 py-4 text-base font-bold rounded-full text-white bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-400 shadow-[0_0_25px_rgba(217,70,239,0.4)] transition-all hover:scale-105"
                 >
-                  Solicitar auditoría gratuita
+                  Pedir presupuesto
                 </a>
                 {/* Secondary: Outline Button */}
                 <a 
                   href="#portfolio" 
                   className="inline-flex justify-center items-center px-8 py-4 text-base font-bold rounded-full text-white border border-white/30 hover:bg-white/5 hover:border-white/50 transition-all"
                 >
-                  Ver portfolio
+                  Ver proyectos
                 </a>
               </div>
             </Reveal>

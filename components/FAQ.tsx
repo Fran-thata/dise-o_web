@@ -5,15 +5,19 @@ import { FaqItem } from '../types';
 const faqs: FaqItem[] = [
   { 
     question: "¿Cuánto cuesta una página web profesional?", 
-    answer: "No hay un precio único, pero la calidad tiene un coste. Webs corporativas parten de rangos profesionales, y tiendas online requieren mayor inversión. Lo importante: diseñamos para que recuperes la inversión." 
+    answer: "El precio varía según las funcionalidades y el tipo de web. Ofrecemos presupuestos personalizados adaptados a las necesidades de cada negocio, desde landing pages sencillas hasta desarrollos a medida complejos." 
   },
   { 
-    question: "¿Cuánto tiempo tardáis en entregarla?", 
-    answer: "En 2 días. Somos ágiles. Tu landing page puede estar lista y publicada en 48 horas una vez tengamos el contenido." 
+    question: "¿Cuánto tiempo tarda el desarrollo de una web?", 
+    answer: "Depende de la envergadura del proyecto. Una landing page puede estar lista en 1-2 semanas, mientras que una web corporativa completa o una tienda online suele tardar entre 3 y 6 semanas." 
   },
   { 
-    question: "¿Incluye dominio y hosting?", 
-    answer: "Podemos gestionarlo o trabajar con tu proveedor. Se cotiza aparte según necesidades." 
+    question: "¿Qué plataforma es mejor para mi proyecto?", 
+    answer: "Analizamos tus necesidades para recomendarte la mejor opción: WordPress para flexibilidad, Webflow para diseño premium, Shopify para ecommerce rápido o desarrollo a medida para funciones especiales." 
+  },
+  { 
+    question: "¿Ofreces mantenimiento y soporte?", 
+    answer: "Sí, ofrecemos planes de mantenimiento y soporte postventa para asegurar que tu web esté siempre actualizada, segura y funcionando a pleno rendimiento." 
   },
 ];
 
@@ -24,7 +28,7 @@ const FAQ: React.FC = () => {
     <section id="faq" className="py-24 bg-bg-900">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl md:text-5xl font-bold text-white mb-12 text-center font-display">
-          Preguntas frecuentes
+          Preguntas frecuentes sobre diseño web
         </h2>
 
         <div className="space-y-4">

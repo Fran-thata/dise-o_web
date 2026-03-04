@@ -18,7 +18,7 @@ export interface Testimonial {
 export interface PortfolioItem {
   id: number;
   title: string;
-  category: 'Corporativa' | 'Ecommerce' | 'Landing';
+  category: 'Corporativa' | 'Ecommerce' | 'Landing' | 'Medida';
   image: string;
   description: string;
   link?: string;

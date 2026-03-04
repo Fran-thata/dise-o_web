@@ -13,27 +13,27 @@ const Contact: React.FC = () => {
           
           {/* Info Block */}
           <div>
-            <Reveal>
+            <Reveal width="100%">
               <span className="text-primary-400 font-bold tracking-widest uppercase text-xs font-display">Contacto</span>
               <h2 className="text-4xl md:text-6xl font-bold text-white mt-4 mb-8 font-display">
-                Pide presupuesto
+                Solicita presupuesto para tu página web
               </h2>
               <p className="text-slate-300 text-lg mb-12 leading-relaxed">
-                ¿Listo para subir de nivel? Cuéntanos tu proyecto. Te responderemos con una propuesta clara, sin tecnicismos y enfocada en rentabilidad.
+                Cuéntanos tu proyecto y te asesoraremos sobre el tipo de página web que mejor se adapta a tu negocio.
               </p>
             </Reveal>
 
             <div className="space-y-6">
               <Reveal delay={100}>
-                <a href="tel:+34900000000" className="flex items-center group p-4 rounded-xl hover:bg-white/5 transition-colors border border-transparent hover:border-white/5">
+                <div className="flex items-center group p-4 rounded-xl hover:bg-white/5 transition-colors border border-transparent hover:border-white/5">
                   <div className="w-12 h-12 rounded-full bg-bg-800 border border-white/10 flex items-center justify-center mr-6 group-hover:scale-110 transition-transform">
                     <Phone className="text-primary-400" size={20} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-white text-lg font-display">Llamada directa</h4>
-                    <p className="text-slate-400 group-hover:text-white transition-colors">Habla con un experto ahora</p>
+                    <h4 className="font-bold text-white text-lg font-display">Pedir presupuesto</h4>
+                    <p className="text-slate-400 group-hover:text-white transition-colors">Formulario de contacto para solicitar información o asesoramiento.</p>
                   </div>
-                </a>
+                </div>
               </Reveal>
 
               <Reveal delay={200}>

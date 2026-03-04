@@ -2,11 +2,10 @@ import React from 'react';
 import { Reveal } from './Reveal';
 
 const steps = [
-  { num: "01", title: "Reunión", desc: "Objetivos claros" },
-  { num: "02", title: "Estrategia", desc: "Estructura SEO" },
-  { num: "03", title: "Diseño", desc: "UI Premium" },
-  { num: "04", title: "Desarrollo", desc: "Código limpio" },
-  { num: "05", title: "Lanzamiento", desc: "Web lista" },
+  { num: "01", title: "Análisis del proyecto", desc: "Estudiamos el negocio, objetivos y tipo de clientes para definir la estructura de la web." },
+  { num: "02", title: "Diseño de la página web", desc: "Creamos una estructura clara y un diseño profesional adaptado a la marca." },
+  { num: "03", title: "Desarrollo y optimización", desc: "Construimos la web optimizando velocidad y experiencia de usuario." },
+  { num: "04", title: "Publicación y soporte", desc: "Publicamos la web y ofrecemos soporte para futuras mejoras." },
 ];
 
 const Process: React.FC = () => {
@@ -14,11 +13,14 @@ const Process: React.FC = () => {
     <section id="proceso" className="py-24 bg-bg-900 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16">
-          <Reveal>
+          <Reveal width="100%">
             <span className="text-secondary-400 font-bold tracking-widest uppercase text-xs mb-2 block font-display">Proceso</span>
             <h2 className="text-3xl md:text-5xl font-bold text-white font-display">
-              De idea a web lista: en 5 pasos
+              Nuestro proceso de trabajo
             </h2>
+            <p className="text-slate-400 mt-4">
+              Seguimos un proceso claro para desarrollar páginas web eficaces y adaptadas a cada proyecto.
+            </p>
           </Reveal>
         </div>
 
@@ -26,7 +28,7 @@ const Process: React.FC = () => {
           {/* Mobile Continuous Vertical Line */}
           <div className="md:hidden absolute left-[3rem] top-0 bottom-0 w-[1px] bg-white/10"></div>
 
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-4 relative">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-4 relative">
             {steps.map((step, index) => (
               <Reveal key={index} delay={index * 100} className="h-full" width="100%">
                 <div className="relative group h-full">

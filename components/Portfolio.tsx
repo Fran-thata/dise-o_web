@@ -3,10 +3,10 @@ import { PortfolioItem } from '../types';
 import { Reveal } from './Reveal';
 
 const items: PortfolioItem[] = [
-  { id: 1, title: "Finanzas Capital", category: "Corporativa", description: "UI Futurist para Fintech", image: "https://picsum.photos/seed/tech1/600/400" },
-  { id: 2, title: "Reformas Integrales", category: "Corporativa", description: "Web para empresa de construcción", image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=600&h=400", link: "https://xwnxtz.com/serv5/serv4/" },
-  { id: 3, title: "Legal Tech", category: "Landing", description: "Landing page alta conversión", image: "https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&q=80&w=600&h=400" },
-  { id: 4, title: "Servicio Premium", category: "Landing", description: "Ver página completa", image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&q=80&w=600&h=400", link: "https://xwnxtz.com/servicio/" },
+  { id: 1, title: "Web corporativa para empresa", category: "Corporativa", description: "Diseño limpio y profesional para empresa de servicios.", image: "https://picsum.photos/seed/corp1/600/400" },
+  { id: 2, title: "Landing page para captación de leads", category: "Landing", description: "Optimizada para conversiones y campañas de marketing.", image: "https://picsum.photos/seed/landing1/600/400" },
+  { id: 3, title: "Tienda online para ecommerce", category: "Ecommerce", description: "Plataforma de venta online con gestión de stock.", image: "https://picsum.photos/seed/shop1/600/400" },
+  { id: 4, title: "Página web a medida", category: "Medida", description: "Desarrollo personalizado con funcionalidades específicas.", image: "https://picsum.photos/seed/custom1/600/400" },
 ];
 
 const Portfolio: React.FC = () => {
@@ -15,12 +15,12 @@ const Portfolio: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
           <div className="max-w-2xl">
-            <Reveal>
+            <Reveal width="100%">
               <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 font-display">
-                Proyectos recientes
+                Proyectos y casos de éxito
               </h2>
               <p className="text-slate-400">
-                Diseño limpio. Código eficiente. Resultados medibles.
+                Algunos ejemplos de páginas web desarrolladas para empresas y profesionales de distintos sectores.
               </p>
             </Reveal>
           </div>
