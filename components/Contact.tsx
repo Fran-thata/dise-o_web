@@ -1,4 +1,5 @@
-import { Mail, MapPin, Send } from 'lucide-react';
+import React from 'react';
+import { Phone, Mail, MapPin, Send } from 'lucide-react';
 import { Reveal } from './Reveal';
 
 const Contact: React.FC = () => {
@@ -15,10 +16,10 @@ const Contact: React.FC = () => {
             <Reveal width="100%">
               <span className="text-primary-400 font-bold tracking-widest uppercase text-xs font-display">Contacto</span>
               <h2 className="text-4xl md:text-6xl font-bold text-white mt-4 mb-8 font-display">
-                Pide presupuesto para tu página web
+                Solicita presupuesto para tu página web
               </h2>
               <p className="text-slate-300 text-lg mb-12 leading-relaxed">
-                Cuéntame qué necesitas y te digo la mejor opción para tu negocio. Sin rodeos: propuesta clara, plazos y siguientes pasos.
+                Cuéntanos tu proyecto y te asesoraremos sobre el tipo de página web que mejor se adapta a tu negocio.
               </p>
             </Reveal>
 
@@ -26,31 +27,37 @@ const Contact: React.FC = () => {
               <Reveal delay={100}>
                 <div className="flex items-center group p-4 rounded-xl hover:bg-white/5 transition-colors border border-transparent hover:border-white/5">
                   <div className="w-12 h-12 rounded-full bg-bg-800 border border-white/10 flex items-center justify-center mr-6 group-hover:scale-110 transition-transform">
-                    <Mail className="text-primary-400" size={20} />
+                    <Phone className="text-primary-400" size={20} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-white text-lg font-display">Email</h4>
-                    <p className="text-slate-400 group-hover:text-white transition-colors">hola@thiara.es</p>
+                    <h4 className="font-bold text-white text-lg font-display">Pedir presupuesto</h4>
+                    <p className="text-slate-400 group-hover:text-white transition-colors">Formulario de contacto para solicitar información o asesoramiento.</p>
                   </div>
                 </div>
               </Reveal>
 
               <Reveal delay={200}>
-                 <div className="flex items-center p-4 rounded-xl">
-                  <div className="w-12 h-12 rounded-full bg-bg-800 border border-white/10 flex items-center justify-center mr-6">
-                    <MapPin className="text-secondary-400" size={20} />
+                <a href="mailto:hola@webpro.com" className="flex items-center group p-4 rounded-xl hover:bg-white/5 transition-colors border border-transparent hover:border-white/5">
+                  <div className="w-12 h-12 rounded-full bg-bg-800 border border-white/10 flex items-center justify-center mr-6 group-hover:scale-110 transition-transform">
+                    <Mail className="text-secondary-400" size={20} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-white text-lg font-display">Ubicación</h4>
-                    <p className="text-slate-400">Servicio online en toda España</p>
+                    <h4 className="font-bold text-white text-lg font-display">Email</h4>
+                    <p className="text-slate-400 group-hover:text-white transition-colors">hola@webpro.com</p>
                   </div>
-                </div>
+                </a>
               </Reveal>
 
               <Reveal delay={300}>
-                <p className="text-xs text-slate-500 font-medium pl-4 border-l-2 border-primary-500/30">
-                  Reunión por videollamada en 24–48h · También puedes escribir por email.
-                </p>
+                 <div className="flex items-center p-4 rounded-xl opacity-60">
+                  <div className="w-12 h-12 rounded-full bg-bg-800 border border-white/10 flex items-center justify-center mr-6">
+                    <MapPin className="text-slate-500" size={20} />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-white text-sm font-display">Oficinas</h4>
+                    <p className="text-xs text-slate-500">Servicio Global • Base en España</p>
+                  </div>
+                </div>
               </Reveal>
             </div>
           </div>

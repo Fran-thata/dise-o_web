@@ -1,6 +1,5 @@
 import React from 'react';
 import { Reveal } from './Reveal';
-import { Link } from 'react-router-dom';
 
 const Hero: React.FC = () => {
   return (
@@ -39,30 +38,30 @@ const Hero: React.FC = () => {
                 Thiara Diseño Web
               </span>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold font-display leading-[1.1] mb-6 text-white tracking-tight">
-                Diseño web para negocios que quieren más clientes
+                Diseño web a medida
               </h1>
             </Reveal>
             
             <Reveal delay={150}>
               <p className="text-lg text-slate-400 mb-8 leading-relaxed max-w-xl font-light">
-                Diseño web corporativo, webs a medida y landing pages creadas para empresas que necesitan una presencia online profesional y enfocada en resultados.
+                Desarrollo de páginas web corporativas, landing pages y proyectos de diseño web a medida optimizados para captar clientes y mejorar la presencia online de tu negocio.
               </p>
             </Reveal>
 
-            {/* Bullets Row */}
+            {/* Badges Row (No H tags) */}
             <Reveal delay={200}>
-              <div className="space-y-3 mb-10">
+              <div className="flex flex-wrap items-center gap-3 mb-10">
                 {[
-                  "Una web creada para atraer clientes", 
-                  "Plan de posicionamiento para tu negocio",
-                  "Estrategia completa: web + SEO"
+                  "100% Adaptable", 
+                  "Optimizada para velocidad", 
+                  "Diseño a medida"
                 ].map((text, idx) => (
-                  <div key={idx} className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-primary-500/20 border border-primary-500/30 flex items-center justify-center flex-shrink-0">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary-400"></div>
-                    </div>
-                    <span className="text-sm font-medium text-slate-300">{text}</span>
-                  </div>
+                  <span 
+                    key={idx} 
+                    className="inline-block px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm font-medium text-secondary-400 backdrop-blur-md hover:border-secondary-400/30 transition-colors"
+                  >
+                    {text}
+                  </span>
                 ))}
               </div>
             </Reveal>
@@ -71,26 +70,26 @@ const Hero: React.FC = () => {
             <Reveal delay={250}>
               <div className="flex flex-col sm:flex-row gap-4 mb-6">
                 {/* Primary: Gradient Button */}
-                <Link 
-                  to="/contacto" 
+                <a 
+                  href="#contacto" 
                   className="inline-flex justify-center items-center px-8 py-4 text-base font-bold rounded-full text-white bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-400 shadow-[0_0_25px_rgba(217,70,239,0.4)] transition-all hover:scale-105"
                 >
                   Pedir presupuesto
-                </Link>
+                </a>
                 {/* Secondary: Outline Button */}
-                <Link 
-                  to="/proyectos" 
+                <a 
+                  href="#portfolio" 
                   className="inline-flex justify-center items-center px-8 py-4 text-base font-bold rounded-full text-white border border-white/30 hover:bg-white/5 hover:border-white/50 transition-all"
                 >
                   Ver proyectos
-                </Link>
+                </a>
               </div>
             </Reveal>
 
             {/* Microcopy */}
             <Reveal delay={300}>
               <p className="text-xs text-slate-500 font-medium pl-2 border-l-2 border-primary-500/30">
-                Trabajamos desde Valencia y online en toda España · Videollamada en 24–48h.
+                Trabajamos online en toda España. Reunión por videollamada en 24–48h.
               </p>
             </Reveal>
           </div>
