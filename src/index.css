@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+
+  --color-bg-900: #0F041C;
+  --color-bg-800: #1A0B2E;
+  --color-bg-700: #2D1B4E;
+
+  --color-primary-500: #D946EF;
+  --color-primary-600: #C026D3;
+  --color-primary-400: #F0ABFC;
+
+  --color-secondary-400: #22D3EE;
+  --color-secondary-500: #06B6D4;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-900 text-slate-200 antialiased selection:bg-primary-500 selection:text-white;
+    font-family: 'Inter', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
+  .text-glow {
+    text-shadow: 0 0 20px rgba(255,255,255,0.3);
+  }
+}
+
+.mask-gradient {
+  mask-image: linear-gradient(to bottom, black, transparent);
+}
+
+.bg-hero-gradient {
+  background-image: radial-gradient(circle at 15% 50%, rgba(217, 70, 239, 0.15), transparent 25%), 
+                    radial-gradient(circle at 85% 30%, rgba(34, 211, 238, 0.15), transparent 25%);
+}
+
+.bg-dots {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
