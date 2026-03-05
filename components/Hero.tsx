@@ -55,8 +55,7 @@ const Hero: React.FC = () => {
                 {[
                   "Una web creada para atraer clientes", 
                   "Plan de posicionamiento para tu negocio",
-                  "Estrategia completa: web + SEO",
-                  "Con diseño web a medida"
+                  "Estrategia completa: web + SEO"
                 ].map((text, idx) => (
                   <div key={idx} className="flex items-center gap-3">
                     <div className="w-5 h-5 rounded-full bg-primary-500/20 border border-primary-500/30 flex items-center justify-center flex-shrink-0">
