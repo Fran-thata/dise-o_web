@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
             
             <Reveal delay={150}>
               <p className="text-lg text-slate-400 mb-8 leading-relaxed max-w-xl font-light">
-                Diseñamos webs modernas, rápidas y con un objetivo claro: que te contacten. Si tu web no genera llamadas, formularios o presupuestos, no está haciendo su trabajo.
+                Diseño web corporativo, webs a medida y landing pages creadas para empresas que necesitan una presencia online profesional y enfocada en resultados.
               </p>
             </Reveal>
 
@@ -53,9 +53,10 @@ const Hero: React.FC = () => {
             <Reveal delay={200}>
               <div className="space-y-3 mb-10">
                 {[
-                  "100% adaptable a móvil (de verdad)", 
-                  "Optimizada para velocidad y experiencia de usuario", 
-                  "Diseño a medida alineado con tu marca"
+                  "Una web creada para atraer clientes", 
+                  "Plan de posicionamiento para tu negocio",
+                  "Estrategia completa: web + SEO",
+                  "Con diseño web a medida"
                 ].map((text, idx) => (
                   <div key={idx} className="flex items-center gap-3">
                     <div className="w-5 h-5 rounded-full bg-primary-500/20 border border-primary-500/30 flex items-center justify-center flex-shrink-0">
@@ -90,7 +91,7 @@ const Hero: React.FC = () => {
             {/* Microcopy */}
             <Reveal delay={300}>
               <p className="text-xs text-slate-500 font-medium pl-2 border-l-2 border-primary-500/30">
-                Trabajamos online en toda España · Videollamada en 24–48h.
+                Trabajamos desde Valencia y online en toda España · Videollamada en 24–48h.
               </p>
             </Reveal>
           </div>
