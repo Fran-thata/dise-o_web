@@ -15,7 +15,7 @@ const Contact: React.FC = () => {
             <Reveal width="100%">
               <span className="text-primary-400 font-bold tracking-widest uppercase text-xs font-display">Contacto</span>
               <h2 className="text-4xl md:text-6xl font-bold text-white mt-4 mb-8 font-display">
-                Pide presupuesto para tu página web en Valencia
+                Pide presupuesto para tu página web
               </h2>
               <p className="text-slate-300 text-lg mb-12 leading-relaxed">
                 Cuéntame qué necesitas y te digo la mejor opción para tu negocio. Sin rodeos: propuesta clara, plazos y siguientes pasos.
@@ -42,7 +42,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-white text-lg font-display">Ubicación</h4>
-                    <p className="text-slate-400">Valencia · Servicio online en toda España</p>
+                    <p className="text-slate-400">Servicio online en toda España</p>
                   </div>
                 </div>
               </Reveal>

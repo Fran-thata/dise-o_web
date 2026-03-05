@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
                 Thiara Diseño Web
               </span>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold font-display leading-[1.1] mb-6 text-white tracking-tight">
-                Diseño web en Valencia para negocios que quieren más clientes
+                Diseño web para negocios que quieren más clientes
               </h1>
             </Reveal>
             
@@ -90,7 +90,7 @@ const Hero: React.FC = () => {
             {/* Microcopy */}
             <Reveal delay={300}>
               <p className="text-xs text-slate-500 font-medium pl-2 border-l-2 border-primary-500/30">
-                Trabajamos desde Valencia y online en toda España · Videollamada en 24–48h.
+                Trabajamos online en toda España · Videollamada en 24–48h.
               </p>
             </Reveal>
           </div>

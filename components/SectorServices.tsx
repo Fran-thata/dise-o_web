@@ -62,7 +62,7 @@ const SectorServices: React.FC = () => {
         <div className="text-center mb-16">
           <Reveal width="100%">
             <h2 className="text-3xl md:text-5xl font-bold text-white font-display">
-              Diseño web por sector (Valencia)
+              Diseño web por sector
             </h2>
             <p className="text-slate-400 mt-4 max-w-2xl mx-auto">
               Cada sector vende distinto. Por eso adaptamos estructura, mensajes y contenidos a tu cliente ideal.
