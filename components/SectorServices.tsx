@@ -1,49 +1,57 @@
 import React from 'react';
 import { Briefcase, HeartPulse, Activity, Home, Utensils, Sparkles, Hammer, ArrowRight } from 'lucide-react';
 import { Reveal } from './Reveal';
+import { Link } from 'react-router-dom';
 
 const sectors = [
   {
     title: "Diseño web para abogados",
-    desc: "Páginas web para abogados orientadas a generar consultas, transmitir confianza y mejorar el posicionamiento online.",
+    desc: "Webs que transmiten confianza, muestran áreas de práctica y facilitan solicitar consulta.",
     icon: Briefcase,
-    color: "text-blue-400"
+    color: "text-blue-400",
+    link: "/sector-abogados"
   },
   {
     title: "Diseño web para clínicas y dentistas",
-    desc: "Diseño web para clínicas y dentistas enfocado en captar pacientes y facilitar solicitudes de información o presupuesto.",
+    desc: "Tratamientos claros, llamadas a la acción y contacto rápido para captar pacientes.",
     icon: HeartPulse,
-    color: "text-red-400"
+    color: "text-red-400",
+    link: "/sector-clinicas"
   },
   {
     title: "Diseño web para fisioterapeutas",
-    desc: "Webs profesionales para fisioterapeutas que buscan mejorar su visibilidad y captar nuevos pacientes.",
+    desc: "Servicios, bonos y solicitud de cita sin fricción (móvil primero).",
     icon: Activity,
-    color: "text-emerald-400"
+    color: "text-emerald-400",
+    link: "/sector-fisio"
   },
   {
     title: "Diseño web para inmobiliarias",
-    desc: "Páginas web para inmobiliarias orientadas a mostrar propiedades, generar contactos y aumentar conversiones.",
+    desc: "Presentación de inmuebles + captación de propietarios y compradores.",
     icon: Home,
-    color: "text-amber-400"
+    color: "text-amber-400",
+    link: "/sector-inmobiliaria"
   },
   {
     title: "Diseño web para restaurantes",
-    desc: "Diseño web para restaurantes con catálogo online, información clara y herramientas para aumentar reservas o pedidos.",
+    desc: "Carta visible, reservas fáciles y toda la info importante en segundos.",
     icon: Utensils,
-    color: "text-orange-400"
+    color: "text-orange-400",
+    link: "/sector-restaurantes"
   },
   {
     title: "Diseño web para centros de estética",
-    desc: "Webs para centros de estética enfocadas en mostrar servicios, precios y facilitar solicitudes de cita.",
+    desc: "Servicios + precios + “pedir cita” bien colocado para convertir visitas.",
     icon: Sparkles,
-    color: "text-pink-400"
+    color: "text-pink-400",
+    link: "/sector-estetica"
   },
   {
     title: "Diseño web para empresas de reformas",
-    desc: "Páginas web para empresas de reformas orientadas a captar solicitudes de presupuesto y mostrar proyectos realizados.",
+    desc: "Portfolio de trabajos, captación de presupuestos y enfoque en confianza.",
     icon: Hammer,
-    color: "text-slate-400"
+    color: "text-slate-400",
+    link: "/sector-reformas"
   }
 ];
 
@@ -54,10 +62,10 @@ const SectorServices: React.FC = () => {
         <div className="text-center mb-16">
           <Reveal width="100%">
             <h2 className="text-3xl md:text-5xl font-bold text-white font-display">
-              Diseño web especializado por sector
+              Diseño web por sector (Valencia)
             </h2>
             <p className="text-slate-400 mt-4 max-w-2xl mx-auto">
-              Cada sector tiene necesidades diferentes. Por eso desarrollamos páginas web adaptadas a cada tipo de negocio para mejorar la captación de clientes.
+              Cada sector vende distinto. Por eso adaptamos estructura, mensajes y contenidos a tu cliente ideal.
             </p>
           </Reveal>
         </div>
@@ -65,7 +73,10 @@ const SectorServices: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {sectors.map((sector, index) => (
             <Reveal key={index} delay={index * 50}>
-              <div className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-white/10 transition-all group">
+              <Link 
+                to={sector.link}
+                className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-white/10 transition-all group block"
+              >
                 <div className={`w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mb-6 ${sector.color} border border-white/5 group-hover:scale-110 transition-transform`}>
                   <sector.icon size={24} />
                 </div>
@@ -73,10 +84,10 @@ const SectorServices: React.FC = () => {
                 <p className="text-sm text-slate-400 mb-6 leading-relaxed">
                   {sector.desc}
                 </p>
-                <div className="flex items-center text-xs font-bold text-primary-400 uppercase tracking-widest group-hover:translate-x-2 transition-transform cursor-pointer">
+                <div className="flex items-center text-xs font-bold text-primary-400 uppercase tracking-widest group-hover:translate-x-2 transition-transform">
                   Saber más <ArrowRight size={14} className="ml-2" />
                 </div>
-              </div>
+              </Link>
             </Reveal>
           ))}
         </div>
