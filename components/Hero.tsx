@@ -34,17 +34,14 @@ const Hero: React.FC = () => {
              </Reveal>
 
             <Reveal delay={100}>
-              <span className="text-secondary-400 font-bold tracking-widest uppercase text-xs md:text-sm mb-4 block font-display">
-                Thiara Diseño Web
-              </span>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold font-display leading-[1.1] mb-6 text-white tracking-tight">
-                Diseño web a medida
+                Diseño web para negocios que quieren más clientes
               </h1>
             </Reveal>
             
             <Reveal delay={150}>
               <p className="text-lg text-slate-400 mb-8 leading-relaxed max-w-xl font-light">
-                Desarrollo de páginas web corporativas, landing pages y proyectos de diseño web a medida optimizados para captar clientes y mejorar la presencia online de tu negocio.
+                Diseño web corporativo, webs a medida y landing pages creadas para empresas que necesitan una presencia online profesional y enfocada en resultados.
               </p>
             </Reveal>
 
@@ -52,9 +49,9 @@ const Hero: React.FC = () => {
             <Reveal delay={200}>
               <div className="flex flex-wrap items-center gap-3 mb-10">
                 {[
-                  "100% Adaptable", 
-                  "Optimizada para velocidad", 
-                  "Diseño a medida"
+                  "Una web creada para atraer clientes", 
+                  "Plan de posicionamiento para tu negocio", 
+                  "Estrategia completa: web + SEO"
                 ].map((text, idx) => (
                   <span 
                     key={idx} 
@@ -89,7 +86,7 @@ const Hero: React.FC = () => {
             {/* Microcopy */}
             <Reveal delay={300}>
               <p className="text-xs text-slate-500 font-medium pl-2 border-l-2 border-primary-500/30">
-                Trabajamos online en toda España. Reunión por videollamada en 24–48h.
+                Trabajamos desde Valencia y online en toda España · Videollamada en 24–48h.
               </p>
             </Reveal>
           </div>
@@ -103,12 +100,15 @@ const Hero: React.FC = () => {
                 {/* The Cyan Ring Border */}
                 <div className="absolute inset-0 rounded-full border-[6px] border-secondary-400 z-20"></div>
                 
-                {/* Image Mask */}
+                {/* Video Mask */}
                 <div className="absolute inset-[6px] rounded-full overflow-hidden z-10 bg-bg-800">
-                   {/* New User Image */}
-                  <img 
-                    src="https://res.cloudinary.com/ddpujsrsg/image/upload/v1768753465/Captura_de_pantalla_2026-01-18_172329_u3nstx.png" 
-                    alt="Experiencia Digital" 
+                   {/* Hero Video */}
+                  <video 
+                    src="https://res.cloudinary.com/ddpujsrsg/video/upload/v1772740222/Dise%C3%B1o_sin_t%C3%ADtulo_2_ibvgsc.mp4" 
+                    autoPlay 
+                    loop 
+                    muted 
+                    playsInline
                     className="w-full h-full object-cover"
                   />
                   {/* Purple overlay to blend slightly */}
