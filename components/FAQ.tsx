@@ -5,27 +5,19 @@ import { FaqItem } from '../types';
 const faqs: FaqItem[] = [
   { 
     question: "¿Cuánto cuesta una página web profesional?", 
-    answer: "Depende del tipo de web y de las funcionalidades. Te preparo un presupuesto a medida (desde landing pages sencillas hasta desarrollos más completos)." 
+    answer: "El precio varía según las funcionalidades y el tipo de web. Ofrecemos presupuestos personalizados adaptados a las necesidades de cada negocio, desde landing pages sencillas hasta desarrollos a medida complejos." 
   },
   { 
-    question: "¿Cuánto tiempo tarda el desarrollo?", 
-    answer: "Depende del alcance, pero solemos trabajar por fases. Primero estructura y diseño, después desarrollo y optimización, y finalmente publicación." 
+    question: "¿Cuánto tiempo tarda el desarrollo de una web?", 
+    answer: "Depende de la envergadura del proyecto. Una landing page puede estar lista en 1-2 semanas, mientras que una web corporativa completa o una tienda online suele tardar entre 3 y 6 semanas." 
   },
   { 
     question: "¿Qué plataforma es mejor para mi proyecto?", 
-    answer: "Se decide según objetivo: si necesitas autogestionar contenido, escalar o integrar funcionalidades. Te recomiendo la opción más práctica para tu caso." 
-  },
-  { 
-    question: "¿La web estará optimizada para móvil y velocidad?", 
-    answer: "Sí. Priorizamos móvil y rendimiento para que cargue rápido y sea fácil de usar." 
-  },
-  { 
-    question: "¿Incluye SEO?", 
-    answer: "Incluye base SEO: estructura, headings correctos, velocidad, indexación y configuración esencial. Si quieres posicionamiento continuo, lo trabajamos como servicio aparte." 
+    answer: "Analizamos tus necesidades para recomendarte la mejor opción: WordPress para flexibilidad, Webflow para diseño premium, Shopify para ecommerce rápido o desarrollo a medida para funciones especiales." 
   },
   { 
     question: "¿Ofreces mantenimiento y soporte?", 
-    answer: "Sí. Puedes quedarte con soporte puntual o contratar mantenimiento para mejoras, seguridad y actualizaciones." 
+    answer: "Sí, ofrecemos planes de mantenimiento y soporte postventa para asegurar que tu web esté siempre actualizada, segura y funcionando a pleno rendimiento." 
   },
 ];
 

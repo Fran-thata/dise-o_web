@@ -2,10 +2,10 @@ import React from 'react';
 import { Reveal } from './Reveal';
 
 const steps = [
-  { num: "01", title: "Análisis del proyecto", desc: "Objetivo, cliente ideal y estructura. Definimos páginas y jerarquía antes de diseñar." },
-  { num: "02", title: "Diseño de la web", desc: "Diseño alineado con tu marca: tipografía, estilos y secciones pensadas para convertir." },
-  { num: "03", title: "Desarrollo y optimización", desc: "Construcción + optimización de rendimiento, responsive y experiencia de usuario." },
-  { num: "04", title: "Publicación y soporte", desc: "Lanzamiento, revisión final y soporte para pulir lo que haga falta." },
+  { num: "01", title: "Análisis del proyecto", desc: "Estudiamos el negocio, objetivos y tipo de clientes para definir la estructura de la web." },
+  { num: "02", title: "Diseño de la página web", desc: "Creamos una estructura clara y un diseño profesional adaptado a la marca." },
+  { num: "03", title: "Desarrollo y optimización", desc: "Construimos la web optimizando velocidad y experiencia de usuario." },
+  { num: "04", title: "Publicación y soporte", desc: "Publicamos la web y ofrecemos soporte para futuras mejoras." },
 ];
 
 const Process: React.FC = () => {
@@ -19,7 +19,7 @@ const Process: React.FC = () => {
               Nuestro proceso de trabajo
             </h2>
             <p className="text-slate-400 mt-4">
-              Un proceso claro evita sorpresas. Sabes qué se hace, cuándo y qué vas a recibir en cada fase.
+              Seguimos un proceso claro para desarrollar páginas web eficaces y adaptadas a cada proyecto.
             </p>
           </Reveal>
         </div>

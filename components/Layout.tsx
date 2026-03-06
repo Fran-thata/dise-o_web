@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { NavItem } from '../types';
-import { Link } from 'react-router-dom';
 
 const navItems: NavItem[] = [
-  { label: 'Inicio', href: '/' },
-  { label: 'Servicios', href: '/#servicios' },
-  { label: 'Portfolio', href: '/proyectos' },
-  { label: 'FAQs', href: '/#faq' },
-  { label: 'Contacto', href: '/contacto' },
+  { label: 'Inicio', href: '#hero' },
+  { label: 'Servicios', href: '#servicios' },
+  { label: 'Portfolio', href: '#portfolio' },
+  { label: 'Kit Digital', href: '#kit-digital' },
+  { label: 'FAQs', href: '#faq' },
+  { label: 'Contacto', href: '#contacto' },
 ];
 
 interface LayoutProps {
@@ -39,33 +39,33 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             {/* Desktop Nav */}
             <nav className="hidden lg:flex space-x-8 items-center">
               {navItems.map((item) => (
-                <Link
+                <a
                   key={item.label}
-                  to={item.href}
+                  href={item.href}
                   className="relative text-sm font-medium text-slate-300 hover:text-white transition-colors py-2 group"
                 >
                   {item.label}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300 group-hover:w-full"></span>
-                </Link>
+                </a>
               ))}
             </nav>
 
             {/* Actions */}
             <div className="hidden lg:flex items-center space-x-6">
               {/* Link secundario */}
-              <Link
-                to="/proyectos"
+              <a
+                href="#portfolio"
                 className="text-sm font-medium text-slate-300 hover:text-white transition-colors"
               >
                 Ver portfolio
-              </Link>
+              </a>
               {/* Botón CTA (pill) */}
-              <Link
-                to="/contacto"
+              <a
+                href="#contacto"
                 className="bg-white text-bg-900 hover:bg-slate-200 px-6 py-2.5 rounded-full text-sm font-bold transition-all hover:scale-105 shadow-[0_0_15px_rgba(255,255,255,0.2)]"
               >
                 Pedir presupuesto
-              </Link>
+              </a>
             </div>
 
             {/* Mobile Menu Button */}
@@ -85,30 +85,30 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <div className="lg:hidden bg-bg-900 border-t border-white/10 animate-fade-in absolute w-full h-screen overflow-y-auto z-50">
             <div className="px-4 pt-4 pb-20 space-y-2">
               {navItems.map((item) => (
-                <Link
+                <a
                   key={item.label}
-                  to={item.href}
+                  href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="block px-4 py-4 text-lg font-medium text-slate-200 hover:bg-white/5 rounded-xl border border-transparent hover:border-white/5"
                 >
                   {item.label}
-                </Link>
+                </a>
               ))}
               <div className="pt-6 flex flex-col gap-4 px-4">
-                 <Link
-                  to="/proyectos"
+                 <a
+                  href="#portfolio"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="block w-full text-center text-slate-300 font-medium py-2"
                 >
                   Ver portfolio
-                </Link>
-                 <Link
-                  to="/contacto"
+                </a>
+                 <a
+                  href="#contacto"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="block w-full text-center bg-white text-bg-900 px-5 py-4 rounded-xl font-bold text-lg"
                 >
                   Pedir presupuesto
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -123,53 +123,46 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
           <div className="space-y-4">
              <a href="#" className="text-2xl font-bold tracking-tighter text-white font-display block">
-                Thiara<span className="text-primary-500">.</span>
+                Thiara
               </a>
             <p className="leading-relaxed opacity-70">
-              Thiara Diseño Web · Transformamos negocios con diseño web estratégico y tecnología moderna.
+              Transformamos negocios con diseño web estratégico y tecnología moderna.
             </p>
           </div>
           <div>
             <h4 className="text-white font-bold mb-4 font-display">Servicios</h4>
             <ul className="space-y-2">
-              <li><Link to="/servicio-corporativo" className="hover:text-primary-400 transition-colors">Diseño web corporativo</Link></li>
-              <li><Link to="/servicio-landing" className="hover:text-primary-400 transition-colors">Diseño de landing page</Link></li>
-              <li><Link to="/servicio-medida" className="hover:text-primary-400 transition-colors">Diseño web a medida</Link></li>
-              <li><Link to="/sector-reformas" className="hover:text-primary-400 transition-colors">Rediseño web</Link></li>
+              <li><a href="#" className="hover:text-primary-400 transition-colors">Diseño Web Corporativo</a></li>
+              <li><a href="#" className="hover:text-primary-400 transition-colors">E-commerce</a></li>
+              <li><a href="#" className="hover:text-primary-400 transition-colors">Marketing Digital</a></li>
             </ul>
           </div>
           <div>
-            <h4 className="text-white font-bold mb-4 font-display">Empresa</h4>
+            <h4 className="text-white font-bold mb-4 font-display">Legal</h4>
             <ul className="space-y-2">
-              <li><Link to="/quien-soy" className="hover:text-primary-400 transition-colors">Quién soy</Link></li>
-              <li><Link to="/por-que-elegirme" className="hover:text-primary-400 transition-colors">Por qué elegirme</Link></li>
-              <li><Link to="/garantia" className="hover:text-primary-400 transition-colors">Garantía y postventa</Link></li>
-              <li><Link to="/como-trabajamos" className="hover:text-primary-400 transition-colors">Cómo trabajamos</Link></li>
+              <li><a href="#" className="hover:text-primary-400 transition-colors">Privacidad</a></li>
+              <li><a href="#" className="hover:text-primary-400 transition-colors">Cookies</a></li>
             </ul>
           </div>
           <div>
              <h4 className="text-white font-bold mb-4 font-display">Redes</h4>
              <div className="flex gap-4">
                {/* Socials placeholder */}
-               <div className="w-8 h-8 rounded-full bg-white/5 hover:bg-primary-500 transition-colors cursor-pointer flex items-center justify-center">
-                 <span className="text-[10px] font-bold">IG</span>
-               </div>
-               <div className="w-8 h-8 rounded-full bg-white/5 hover:bg-primary-500 transition-colors cursor-pointer flex items-center justify-center">
-                 <span className="text-[10px] font-bold">LI</span>
-               </div>
+               <div className="w-8 h-8 rounded-full bg-white/5 hover:bg-primary-500 transition-colors cursor-pointer"></div>
+               <div className="w-8 h-8 rounded-full bg-white/5 hover:bg-primary-500 transition-colors cursor-pointer"></div>
              </div>
           </div>
         </div>
         <div className="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-white/5 text-center text-xs opacity-50">
-          © 2026 Thiara Diseño Web. Todos los derechos reservados.
+          © {new Date().getFullYear()} Thiara Diseño Web. Todos los derechos reservados.
         </div>
       </footer>
 
       {/* Sticky Mobile CTA */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-bg-900/95 backdrop-blur-xl border-t border-white/10 z-50 flex gap-3">
-        <Link to="/contacto" className="flex-1 bg-white/10 border border-white/10 text-white font-bold py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-white/20 transition-all text-sm">
+        <a href="#contacto" className="flex-1 bg-white/10 border border-white/10 text-white font-bold py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-white/20 transition-all text-sm">
           Auditoría Gratis
-        </Link>
+        </a>
         <a href="https://wa.me/" className="flex-1 bg-primary-600 text-white font-bold py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-primary-500 transition-all shadow-lg shadow-primary-500/20 text-sm">
           WhatsApp
         </a>

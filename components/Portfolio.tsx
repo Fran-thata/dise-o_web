@@ -3,9 +3,10 @@ import { PortfolioItem } from '../types';
 import { Reveal } from './Reveal';
 
 const items: PortfolioItem[] = [
-  { id: 1, title: "Web corporativa para empresa de servicios", category: "Corporativa", description: "Diseño limpio, estructura clara y foco en solicitudes.", image: "https://picsum.photos/seed/corp1/600/400" },
-  { id: 2, title: "Landing para captación de leads", category: "Landing", description: "Página directa, sin distracciones, optimizada para conversiones.", image: "https://picsum.photos/seed/landing1/600/400" },
-  { id: 3, title: "Web a medida con funcionalidades específicas", category: "Medida", description: "Desarrollo personalizado según necesidades del proyecto.", image: "https://picsum.photos/seed/custom1/600/400" },
+  { id: 1, title: "Web corporativa para empresa", category: "Corporativa", description: "Diseño limpio y profesional para empresa de servicios.", image: "https://picsum.photos/seed/corp1/600/400" },
+  { id: 2, title: "Landing page para captación de leads", category: "Landing", description: "Optimizada para conversiones y campañas de marketing.", image: "https://picsum.photos/seed/landing1/600/400" },
+  { id: 3, title: "Tienda online para ecommerce", category: "Ecommerce", description: "Plataforma de venta online con gestión de stock.", image: "https://picsum.photos/seed/shop1/600/400" },
+  { id: 4, title: "Página web a medida", category: "Medida", description: "Desarrollo personalizado con funcionalidades específicas.", image: "https://picsum.photos/seed/custom1/600/400" },
 ];
 
 const Portfolio: React.FC = () => {
@@ -19,14 +20,14 @@ const Portfolio: React.FC = () => {
                 Proyectos y casos de éxito
               </h2>
               <p className="text-slate-400">
-                Aquí verás ejemplos reales (o representativos) por tipo de negocio.
+                Algunos ejemplos de páginas web desarrolladas para empresas y profesionales de distintos sectores.
               </p>
             </Reveal>
           </div>
         </div>
 
-        {/* Updated grid for 3 items */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Updated grid for 4 items: 2 columns on medium screens and up */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {items.map((item, index) => (
             <Reveal key={item.id} delay={index * 50}>
               {item.link ? (
