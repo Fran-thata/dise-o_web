@@ -72,9 +72,9 @@ const Services: React.FC = () => {
           </Reveal>
 
           {/* Card 4: Rediseño web */}
-          <Reveal delay={300} className="h-full">
-            <div className="glass-card p-8 rounded-3xl hover:border-secondary-500/50 transition-colors duration-300 flex flex-col h-full">
-              <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center mb-6 text-secondary-400 border border-white/10">
+          <Reveal delay={400} className="h-full">
+            <div className="glass-card p-8 rounded-3xl hover:border-primary-500/50 transition-colors duration-300 flex flex-col h-full">
+              <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center mb-6 text-primary-400 border border-white/10">
                 <RefreshCw size={28} />
               </div>
               <h3 className="text-2xl font-bold text-white mb-3 font-display">Rediseño web</h3>

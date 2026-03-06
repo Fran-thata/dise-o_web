@@ -1,6 +1,5 @@
 import SubPageLayout from '../components/SubPageLayout';
 import { Reveal } from '../components/Reveal';
-
 const ServicioMedida = () => {
   return (
     <SubPageLayout 
@@ -16,7 +15,6 @@ const ServicioMedida = () => {
             Si tienes una idea de negocio que requiere funcionalidades especiales, integraciones con APIs externas o una estructura de datos compleja, el diseño web a medida es la solución.
           </p>
         </section>
-
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-white mb-4 font-display">¿Qué podemos construir?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-slate-400">
@@ -32,5 +30,4 @@ const ServicioMedida = () => {
     </SubPageLayout>
   );
 };
-
 export default ServicioMedida;

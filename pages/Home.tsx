@@ -7,7 +7,6 @@ import Process from './../components/Process';
 import Portfolio from './../components/Portfolio';
 import FAQ from './../components/FAQ';
 import Contact from './../components/Contact';
-
 const Home = () => {
   return (
     <>
@@ -23,5 +22,4 @@ const Home = () => {
     </>
   );
 };
-
 export default Home;

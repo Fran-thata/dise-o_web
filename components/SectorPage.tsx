@@ -1,7 +1,6 @@
 import React from 'react';
 import SubPageLayout from '../components/SubPageLayout';
 import { Reveal } from '../components/Reveal';
-
 interface SectorPageProps {
   sector: string;
   title: string;
@@ -9,7 +8,6 @@ interface SectorPageProps {
   description: string;
   features: string[];
 }
-
 const SectorPage: React.FC<SectorPageProps> = ({ sector, title, subtitle, description, features }) => {
   return (
     <SubPageLayout 
@@ -25,7 +23,6 @@ const SectorPage: React.FC<SectorPageProps> = ({ sector, title, subtitle, descri
             {description}
           </p>
         </section>
-
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-white mb-4 font-display">¿Qué incluimos?</h2>
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-slate-400">
@@ -41,5 +38,4 @@ const SectorPage: React.FC<SectorPageProps> = ({ sector, title, subtitle, descri
     </SubPageLayout>
   );
 };
-
 export default SectorPage;

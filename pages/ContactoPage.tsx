@@ -1,6 +1,5 @@
 import SubPageLayout from '../components/SubPageLayout';
 import Contact from '../components/Contact';
-
 const ContactoPage = () => {
   return (
     <SubPageLayout 
@@ -13,5 +12,4 @@ const ContactoPage = () => {
     </SubPageLayout>
   );
 };
-
 export default ContactoPage;

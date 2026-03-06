@@ -1,6 +1,5 @@
 import React from 'react';
 import { Reveal } from './Reveal';
-
 interface SubPageLayoutProps {
   title: string;
   subtitle?: string;
@@ -8,7 +7,6 @@ interface SubPageLayoutProps {
   ctaText?: string;
   ctaHref?: string;
 }
-
 const SubPageLayout: React.FC<SubPageLayoutProps> = ({ title, subtitle, children, ctaText, ctaHref }) => {
   return (
     <div className="pt-32 pb-24 bg-bg-900 min-h-screen">
@@ -23,11 +21,9 @@ const SubPageLayout: React.FC<SubPageLayoutProps> = ({ title, subtitle, children
             </p>
           )}
         </Reveal>
-
         <div className="prose prose-invert prose-slate max-w-none">
           {children}
         </div>
-
         {ctaText && ctaHref && (
           <div className="mt-16 pt-12 border-t border-white/10">
             <Reveal width="100%">
@@ -48,5 +44,4 @@ const SubPageLayout: React.FC<SubPageLayoutProps> = ({ title, subtitle, children
     </div>
   );
 };
-
 export default SubPageLayout;

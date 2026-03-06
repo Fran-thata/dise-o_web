@@ -1,6 +1,5 @@
 import SubPageLayout from '../components/SubPageLayout';
 import { Reveal } from '../components/Reveal';
-
 const ComoTrabajamos = () => {
   return (
     <SubPageLayout 
@@ -44,5 +43,4 @@ const ComoTrabajamos = () => {
     </SubPageLayout>
   );
 };
-
 export default ComoTrabajamos;

@@ -1,6 +1,5 @@
 import SubPageLayout from '../components/SubPageLayout';
 import { Reveal } from '../components/Reveal';
-
 const PorQueElegirme = () => {
   return (
     <SubPageLayout 
@@ -32,5 +31,4 @@ const PorQueElegirme = () => {
     </SubPageLayout>
   );
 };
-
 export default PorQueElegirme;

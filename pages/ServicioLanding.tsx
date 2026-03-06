@@ -1,6 +1,5 @@
 import SubPageLayout from '../components/SubPageLayout';
 import { Reveal } from '../components/Reveal';
-
 const ServicioLanding = () => {
   return (
     <SubPageLayout 
@@ -16,7 +15,6 @@ const ServicioLanding = () => {
             Una landing page no es una web convencional. Es una página sin distracciones, con una propuesta de valor clara y llamadas a la acción estratégicamente situadas para maximizar el retorno de tu inversión en publicidad (Google Ads, Facebook Ads, etc.).
           </p>
         </section>
-
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-white mb-4 font-display">Características clave</h2>
           <ul className="space-y-4 text-slate-400">
@@ -42,5 +40,4 @@ const ServicioLanding = () => {
     </SubPageLayout>
   );
 };
-
 export default ServicioLanding;

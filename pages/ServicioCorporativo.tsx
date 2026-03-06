@@ -1,6 +1,5 @@
 import SubPageLayout from '../components/SubPageLayout';
 import { Reveal } from '../components/Reveal';
-
 const ServicioCorporativo = () => {
   return (
     <SubPageLayout 
@@ -39,7 +38,6 @@ const ServicioCorporativo = () => {
             </div>
           </div>
         </section>
-
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-white mb-4 font-display">Ideal para...</h2>
           <p className="text-slate-400 mb-6">
@@ -50,5 +48,4 @@ const ServicioCorporativo = () => {
     </SubPageLayout>
   );
 };
-
 export default ServicioCorporativo;

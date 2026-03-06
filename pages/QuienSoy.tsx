@@ -1,6 +1,5 @@
 import SubPageLayout from '../components/SubPageLayout';
 import { Reveal } from '../components/Reveal';
-
 const QuienSoy = () => {
   return (
     <SubPageLayout 
@@ -19,7 +18,6 @@ const QuienSoy = () => {
             En un mercado saturado, tener una web "bonita" ya no es suficiente. Necesitas una estructura clara, una velocidad de carga óptima y un mensaje que conecte con tu cliente ideal desde el primer segundo.
           </p>
         </section>
-
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-white mb-4 font-display">¿Por qué trabajar conmigo?</h2>
           <ul className="space-y-4 text-slate-400">
@@ -41,5 +39,4 @@ const QuienSoy = () => {
     </SubPageLayout>
   );
 };
-
 export default QuienSoy;

@@ -1,6 +1,5 @@
 import SubPageLayout from '../components/SubPageLayout';
 import Portfolio from '../components/Portfolio';
-
 const Proyectos = () => {
   return (
     <SubPageLayout 
@@ -18,5 +17,4 @@ const Proyectos = () => {
     </SubPageLayout>
   );
 };
-
 export default Proyectos;

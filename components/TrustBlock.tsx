@@ -1,7 +1,6 @@
 import React from 'react';
 import { CheckCircle2 } from 'lucide-react';
 import { Reveal } from './Reveal';
-
 const TrustBlock: React.FC = () => {
   return (
     <section className="py-24 bg-bg-800/50 border-y border-white/5 relative overflow-hidden">
@@ -21,7 +20,6 @@ const TrustBlock: React.FC = () => {
               </p>
             </div>
           </Reveal>
-
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <Reveal delay={100}>
               <div className="glass-card p-6 rounded-2xl border-white/10 hover:border-primary-500/30 transition-colors">
@@ -32,7 +30,6 @@ const TrustBlock: React.FC = () => {
                 <p className="text-sm text-slate-400">Ves avances desde el primer momento y decides con criterio.</p>
               </div>
             </Reveal>
-
             <Reveal delay={200}>
               <div className="glass-card p-6 rounded-2xl border-white/10 hover:border-primary-500/30 transition-colors">
                 <div className="flex items-center gap-3 mb-3">
@@ -42,7 +39,6 @@ const TrustBlock: React.FC = () => {
                 <p className="text-sm text-slate-400">No te dejo tirado: ajustes y mantenimiento si lo necesitas.</p>
               </div>
             </Reveal>
-
             <Reveal delay={300} className="sm:col-span-2">
               <div className="glass-card p-6 rounded-2xl border-white/10 hover:border-primary-500/30 transition-colors">
                 <div className="flex items-center gap-3 mb-3">
@@ -58,5 +54,4 @@ const TrustBlock: React.FC = () => {
     </section>
   );
 };
-
 export default TrustBlock;

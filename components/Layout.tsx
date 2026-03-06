@@ -27,13 +27,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <div className="flex justify-between items-center h-20">
             {/* Logo [MARCA] - Updated to Thiara */}
             <div className="flex-shrink-0 flex items-center group cursor-pointer">
-              <a href="#" className="flex items-center gap-2">
+              <Link to="/" className="flex items-center gap-2">
                 {/* Logo icon T */}
                 <div className="w-8 h-8 rounded-full bg-white text-bg-900 flex items-center justify-center font-bold font-display text-lg">T</div>
                 <span className="text-xl font-bold tracking-tight text-white font-display">
                   Thiara<span className="text-primary-500">.</span>
                 </span>
-              </a>
+              </Link>
             </div>
 
             {/* Desktop Nav */}
@@ -122,9 +122,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <footer className="bg-black py-12 border-t border-white/10 text-slate-400 mb-20 md:mb-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
           <div className="space-y-4">
-             <a href="#" className="text-2xl font-bold tracking-tighter text-white font-display block">
+             <Link to="/" className="text-2xl font-bold tracking-tighter text-white font-display block">
                 Thiara<span className="text-primary-500">.</span>
-              </a>
+              </Link>
             <p className="leading-relaxed opacity-70">
               Thiara Diseño Web · Transformamos negocios con diseño web estratégico y tecnología moderna.
             </p>

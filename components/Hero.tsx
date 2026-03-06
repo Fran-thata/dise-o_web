@@ -1,5 +1,6 @@
 import React from 'react';
 import { Reveal } from './Reveal';
+import { Link } from 'react-router-dom';
 
 const Hero: React.FC = () => {
   return (
@@ -70,19 +71,19 @@ const Hero: React.FC = () => {
             <Reveal delay={250}>
               <div className="flex flex-col sm:flex-row gap-4 mb-6">
                 {/* Primary: Gradient Button */}
-                <a 
-                  href="#contacto" 
+                <Link 
+                  to="/contacto" 
                   className="inline-flex justify-center items-center px-8 py-4 text-base font-bold rounded-full text-white bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-400 shadow-[0_0_25px_rgba(217,70,239,0.4)] transition-all hover:scale-105"
                 >
                   Pedir presupuesto
-                </a>
+                </Link>
                 {/* Secondary: Outline Button */}
-                <a 
-                  href="#portfolio" 
+                <Link 
+                  to="/proyectos" 
                   className="inline-flex justify-center items-center px-8 py-4 text-base font-bold rounded-full text-white border border-white/30 hover:bg-white/5 hover:border-white/50 transition-all"
                 >
                   Ver proyectos
-                </a>
+                </Link>
               </div>
             </Reveal>
 

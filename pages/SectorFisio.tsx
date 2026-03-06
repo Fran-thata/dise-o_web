@@ -1,5 +1,4 @@
 import SectorPage from '../components/SectorPage';
-
 const SectorFisio = () => (
   <SectorPage 
     sector="Fisioterapeutas"
@@ -16,5 +15,4 @@ const SectorFisio = () => (
     ]}
   />
 );
-
 export default SectorFisio;

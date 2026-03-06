@@ -1,55 +1,63 @@
 import React from 'react';
 import { Briefcase, HeartPulse, Activity, Home, Utensils, Sparkles, Hammer, ArrowRight } from 'lucide-react';
 import { Reveal } from './Reveal';
+import { Link } from 'react-router-dom';
 
 const sectors = [
   {
     title: "Diseño web para abogados",
     desc: "Páginas web para abogados orientadas a generar consultas, transmitir confianza y mejorar el posicionamiento online.",
     icon: Briefcase,
-    color: "text-blue-400"
+    color: "text-blue-400",
+    href: "/sector-abogados"
   },
   {
     title: "Diseño web para clínicas y dentistas",
     desc: "Diseño web para clínicas y dentistas enfocado en captar pacientes y facilitar solicitudes de información o presupuesto.",
     icon: HeartPulse,
-    color: "text-red-400"
+    color: "text-red-400",
+    href: "/sector-clinicas"
   },
   {
     title: "Diseño web para fisioterapeutas",
     desc: "Webs profesionales para fisioterapeutas que buscan mejorar su visibilidad y captar nuevos pacientes.",
     icon: Activity,
-    color: "text-emerald-400"
+    color: "text-emerald-400",
+    href: "/sector-fisio"
   },
   {
     title: "Diseño web para inmobiliarias",
     desc: "Páginas web para inmobiliarias orientadas a mostrar propiedades, generar contactos y aumentar conversiones.",
     icon: Home,
-    color: "text-amber-400"
+    color: "text-amber-400",
+    href: "/sector-inmobiliaria"
   },
   {
     title: "Diseño web para restaurantes",
     desc: "Diseño web para restaurantes con catálogo online, información clara y herramientas para aumentar reservas o pedidos.",
     icon: Utensils,
-    color: "text-orange-400"
+    color: "text-orange-400",
+    href: "/sector-restaurantes"
   },
   {
     title: "Diseño web para centros de estética",
     desc: "Webs para centros de estética enfocadas en mostrar servicios, precios y facilitar solicitudes de cita.",
     icon: Sparkles,
-    color: "text-pink-400"
+    color: "text-pink-400",
+    href: "/sector-estetica"
   },
   {
     title: "Diseño web para empresas de reformas",
     desc: "Páginas web para empresas de reformas orientadas a captar solicitudes de presupuesto y mostrar proyectos realizados.",
     icon: Hammer,
-    color: "text-slate-400"
+    color: "text-slate-400",
+    href: "/sector-reformas"
   }
 ];
 
 const SectorServices: React.FC = () => {
   return (
-    <section className="py-24 bg-bg-800/30">
+    <section id="sectores" className="py-24 bg-bg-800/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <Reveal width="100%">
@@ -73,9 +81,9 @@ const SectorServices: React.FC = () => {
                 <p className="text-sm text-slate-400 mb-6 leading-relaxed">
                   {sector.desc}
                 </p>
-                <div className="flex items-center text-xs font-bold text-primary-400 uppercase tracking-widest group-hover:translate-x-2 transition-transform cursor-pointer">
+                <Link to={sector.href} className="flex items-center text-xs font-bold text-primary-400 uppercase tracking-widest group-hover:translate-x-2 transition-transform cursor-pointer">
                   Saber más <ArrowRight size={14} className="ml-2" />
-                </div>
+                </Link>
               </div>
             </Reveal>
           ))}
@@ -92,21 +100,21 @@ const SectorServices: React.FC = () => {
                 <p className="text-sm text-slate-400 mb-6 leading-relaxed">
                   {sectors[6].desc}
                 </p>
-                <div className="flex items-center text-xs font-bold text-primary-400 uppercase tracking-widest group-hover:translate-x-2 transition-transform cursor-pointer">
+                <Link to={sectors[6].href} className="flex items-center text-xs font-bold text-primary-400 uppercase tracking-widest group-hover:translate-x-2 transition-transform cursor-pointer">
                   Saber más <ArrowRight size={14} className="ml-2" />
-                </div>
+                </Link>
               </div>
             </Reveal>
           </div>
           
           <Reveal delay={400}>
             <div className="mt-12">
-              <a 
-                href="#contacto" 
+              <Link 
+                to="/contacto" 
                 className="inline-flex justify-center items-center px-10 py-4 text-base font-bold rounded-full text-white bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-400 shadow-[0_0_25px_rgba(217,70,239,0.4)] transition-all hover:scale-105"
               >
                 Pedir presupuesto sin compromiso
-              </a>
+              </Link>
             </div>
           </Reveal>
         </div>
