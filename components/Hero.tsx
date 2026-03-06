@@ -38,13 +38,13 @@ const Hero: React.FC = () => {
                 Thiara Diseño Web
               </span>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold font-display leading-[1.1] mb-6 text-white tracking-tight">
-                Diseño web a medida
+                Diseño web para negocios que quieren más clientes
               </h1>
             </Reveal>
             
             <Reveal delay={150}>
               <p className="text-lg text-slate-400 mb-8 leading-relaxed max-w-xl font-light">
-                Desarrollo de páginas web corporativas, landing pages y proyectos de diseño web a medida optimizados para captar clientes y mejorar la presencia online de tu negocio.
+                Diseño web corporativo, webs a medida y landing pages creadas para empresas que necesitan una presencia online profesional y enfocada en resultados.
               </p>
             </Reveal>
 
@@ -52,9 +52,9 @@ const Hero: React.FC = () => {
             <Reveal delay={200}>
               <div className="flex flex-wrap items-center gap-3 mb-10">
                 {[
-                  "100% Adaptable", 
-                  "Optimizada para velocidad", 
-                  "Diseño a medida"
+                  "Una web creada para atraer clientes", 
+                  "Plan de posicionamiento para tu negocio", 
+                  "Estrategia completa: web + SEO"
                 ].map((text, idx) => (
                   <span 
                     key={idx} 
@@ -89,7 +89,7 @@ const Hero: React.FC = () => {
             {/* Microcopy */}
             <Reveal delay={300}>
               <p className="text-xs text-slate-500 font-medium pl-2 border-l-2 border-primary-500/30">
-                Trabajamos online en toda España. Reunión por videollamada en 24–48h.
+                Trabajamos desde Valencia y online en toda España · Videollamada en 24–48h.
               </p>
             </Reveal>
           </div>

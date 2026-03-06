@@ -63,9 +63,9 @@ const SectorServices: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {sectors.map((sector, index) => (
+          {sectors.slice(0, 6).map((sector, index) => (
             <Reveal key={index} delay={index * 50}>
-              <div className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-white/10 transition-all group">
+              <div className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-white/10 transition-all group h-full">
                 <div className={`w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mb-6 ${sector.color} border border-white/5 group-hover:scale-110 transition-transform`}>
                   <sector.icon size={24} />
                 </div>
@@ -79,6 +79,36 @@ const SectorServices: React.FC = () => {
               </div>
             </Reveal>
           ))}
+        </div>
+
+        <div className="mt-12 flex flex-col items-center">
+          <div className="max-w-md w-full">
+            <Reveal delay={300}>
+              <div className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-white/10 transition-all group">
+                <div className={`w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mb-6 ${sectors[6].color} border border-white/5 group-hover:scale-110 transition-transform`}>
+                  {React.createElement(sectors[6].icon, { size: 24 })}
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 font-display">{sectors[6].title}</h3>
+                <p className="text-sm text-slate-400 mb-6 leading-relaxed">
+                  {sectors[6].desc}
+                </p>
+                <div className="flex items-center text-xs font-bold text-primary-400 uppercase tracking-widest group-hover:translate-x-2 transition-transform cursor-pointer">
+                  Saber más <ArrowRight size={14} className="ml-2" />
+                </div>
+              </div>
+            </Reveal>
+          </div>
+          
+          <Reveal delay={400}>
+            <div className="mt-12">
+              <a 
+                href="#contacto" 
+                className="inline-flex justify-center items-center px-10 py-4 text-base font-bold rounded-full text-white bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-400 shadow-[0_0_25px_rgba(217,70,239,0.4)] transition-all hover:scale-105"
+              >
+                Pedir presupuesto sin compromiso
+              </a>
+            </div>
+          </Reveal>
         </div>
       </div>
     </section>

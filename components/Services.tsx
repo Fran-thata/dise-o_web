@@ -1,6 +1,7 @@
 import React from 'react';
-import { Building2, ShoppingBag, Target, ArrowRight, Code, RefreshCw, User } from 'lucide-react';
+import { Building2, Target, ArrowRight, Code, RefreshCw } from 'lucide-react';
 import { Reveal } from './Reveal';
+import { Link } from 'react-router-dom';
 
 const Services: React.FC = () => {
   return (
@@ -15,12 +16,12 @@ const Services: React.FC = () => {
               Servicios de diseño web profesional
             </h2>
             <p className="text-slate-400 mt-4 max-w-2xl mx-auto">
-              Ofrecemos diferentes servicios de diseño web adaptados a empresas, profesionales y negocios que necesitan mejorar su presencia online y generar más clientes.
+              Elige el tipo de web según lo que necesitas hoy: presencia sólida, campañas que conviertan o un desarrollo más avanzado.
             </p>
           </Reveal>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           
           {/* Card 1: Diseño web corporativo */}
           <Reveal delay={0} className="h-full">
@@ -30,11 +31,11 @@ const Services: React.FC = () => {
               </div>
               <h3 className="text-2xl font-bold text-white mb-3 font-display">Diseño web corporativo</h3>
               <p className="text-slate-400 mb-8 flex-grow">
-                Diseñamos páginas web corporativas pensadas para transmitir confianza, mejorar la imagen de tu empresa y captar nuevos clientes.
+                Para empresas que quieren transmitir confianza, explicar servicios sin líos y conseguir contactos.
               </p>
-              <button className="w-full py-3 rounded-xl border border-white/10 hover:bg-white/5 text-white font-medium transition-colors flex items-center justify-center">
+              <Link to="/servicio-corporativo" className="w-full py-3 rounded-xl border border-white/10 hover:bg-white/5 text-white font-medium transition-colors flex items-center justify-center">
                  Más información <ArrowRight size={16} className="ml-2" />
-              </button>
+              </Link>
             </div>
           </Reveal>
 
@@ -46,75 +47,43 @@ const Services: React.FC = () => {
               </div>
               <h3 className="text-2xl font-bold text-white mb-3 font-display">Diseño de landing page</h3>
               <p className="text-slate-400 mb-8 flex-grow">
-                Creamos landing pages optimizadas para conversiones, ideales para campañas de marketing, captación de leads o lanzamiento de servicios.
+                Páginas enfocadas a conversiones: campañas, captación de leads o lanzamiento de un servicio.
               </p>
-              <button className="w-full py-3 rounded-xl bg-white text-bg-900 font-bold hover:bg-slate-200 transition-colors">
+              <Link to="/servicio-landing" className="w-full py-3 rounded-xl bg-white text-bg-900 font-bold hover:bg-slate-200 transition-colors flex items-center justify-center">
                  Ver ejemplo
-              </button>
+              </Link>
             </div>
           </Reveal>
 
-          {/* Card 3: Desarrollo web a medida */}
+          {/* Card 3: Diseño web a medida */}
           <Reveal delay={200} className="h-full">
             <div className="glass-card p-8 rounded-3xl hover:border-primary-500/50 transition-colors duration-300 flex flex-col h-full">
               <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center mb-6 text-primary-400 border border-white/10">
                 <Code size={28} />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-3 font-display">Desarrollo web a medida</h3>
+              <h3 className="text-2xl font-bold text-white mb-3 font-display">Diseño web a medida</h3>
               <p className="text-slate-400 mb-8 flex-grow">
-                Desarrollamos páginas web a medida adaptadas a las necesidades específicas de cada proyecto y con funcionalidades personalizadas.
+                Cuando necesitas algo más que “una web”: funcionalidades personalizadas, integraciones o estructura compleja.
               </p>
-              <button className="w-full py-3 rounded-xl border border-white/10 hover:bg-white/5 text-white font-medium transition-colors flex items-center justify-center">
+              <Link to="/servicio-medida" className="w-full py-3 rounded-xl border border-white/10 hover:bg-white/5 text-white font-medium transition-colors flex items-center justify-center">
                  Saber más <ArrowRight size={16} className="ml-2" />
-              </button>
+              </Link>
             </div>
           </Reveal>
 
-          {/* Card 4: Tienda online */}
+          {/* Card 4: Rediseño web */}
           <Reveal delay={300} className="h-full">
             <div className="glass-card p-8 rounded-3xl hover:border-secondary-500/50 transition-colors duration-300 flex flex-col h-full">
               <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center mb-6 text-secondary-400 border border-white/10">
-                <ShoppingBag size={28} />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-3 font-display">Tienda online</h3>
-              <p className="text-slate-400 mb-8 flex-grow">
-                Diseñamos tiendas online preparadas para vender en internet con una experiencia de usuario optimizada.
-              </p>
-              <button className="w-full py-3 rounded-xl border border-white/10 hover:bg-white/5 text-white font-medium transition-colors flex items-center justify-center">
-                 Ver ecommerce <ArrowRight size={16} className="ml-2" />
-              </button>
-            </div>
-          </Reveal>
-
-          {/* Card 5: Rediseño web */}
-          <Reveal delay={400} className="h-full">
-            <div className="glass-card p-8 rounded-3xl hover:border-primary-500/50 transition-colors duration-300 flex flex-col h-full">
-              <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center mb-6 text-primary-400 border border-white/10">
                 <RefreshCw size={28} />
               </div>
               <h3 className="text-2xl font-bold text-white mb-3 font-display">Rediseño web</h3>
               <p className="text-slate-400 mb-8 flex-grow">
-                Mejoramos páginas web existentes optimizando diseño, velocidad y conversión.
+                Si tu web se quedó vieja o carga lento: renovamos diseño, estructura, velocidad y conversión.
               </p>
-              <button className="w-full py-3 rounded-xl border border-white/10 hover:bg-white/5 text-white font-medium transition-colors flex items-center justify-center">
+              <Link to="/sector-reformas" className="w-full py-3 rounded-xl border border-white/10 hover:bg-white/5 text-white font-medium transition-colors flex items-center justify-center">
                  Actualizar mi web <ArrowRight size={16} className="ml-2" />
-              </button>
-            </div>
-          </Reveal>
-
-          {/* Card 6: Web para marca personal o portfolio */}
-          <Reveal delay={500} className="h-full">
-            <div className="glass-card p-8 rounded-3xl hover:border-secondary-500/50 transition-colors duration-300 flex flex-col h-full">
-              <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center mb-6 text-secondary-400 border border-white/10">
-                <User size={28} />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-3 font-display">Web para marca personal</h3>
-              <p className="text-slate-400 mb-8 flex-grow">
-                Diseñamos páginas web para profesionales que necesitan mostrar su trabajo y posicionar su marca personal.
-              </p>
-              <button className="w-full py-3 rounded-xl border border-white/10 hover:bg-white/5 text-white font-medium transition-colors flex items-center justify-center">
-                 Ver portfolios <ArrowRight size={16} className="ml-2" />
-              </button>
+              </Link>
             </div>
           </Reveal>
 
